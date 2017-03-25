@@ -2,12 +2,12 @@
 
 import socket
 
-host = 'www.google.com'
-port = 80
+host = '0.0.0.0'
+port = 9999
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((host, port))
-client.send("GET / HTTP/1.1\r\nHOST: google.com\r\n\r\n")
+client.send("Hello")
 
 res = client.recv(4096)
 
